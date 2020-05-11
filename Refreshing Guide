@@ -1,0 +1,78 @@
+## let and const
+let var = 'ini variabel';
+const var = 'ini variabel tetap';
+
+
+
+## Fungsi Panah
+panah digunakan dalam penulisan function 
+
+#tidak menggunakan panah
+function printName(name){
+  console.log("nama");
+}
+
+#menggunakan panah
+const printName = (name) => {
+  console.log("nama");
+}
+
+const multiply = number => number * 2;
+console.log(multiply(4));
+
+##export and import
+#export 
+* person.js
+const person = {
+  name: 'Max'
+}
+export default person
+
+* utility.js
+export const clean = () => {....}
+export const baseData = 10;
+
+#import
+import person from './person.js';
+import prs from './person.js';
+
+import {baseData} from './utility.js'
+import {clean} from './utility.js' 
+
+##class
+class person{
+  name = 'Max'; // property
+  const name = () => {...} // method
+}
+
+* usage
+const myPerson = new Person()
+myPerson.call();
+console.log(myPerson.name)
+
+class Human{ //class
+  constructor(){ //constructor
+    this.gender = 'Female';
+  }
+  
+  printGender(){ //method
+    console.log(this.gender)
+  }
+}
+
+
+class Person extends Human{ //inheritance
+  constructor(){
+    super();
+    this.name = 'Ari';
+  }
+  
+  printMyName(){
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printMyName();
+person.printGender();
+
